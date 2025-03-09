@@ -1,0 +1,65 @@
+
+==== INSTRUCCIONES PARA INSTALAR Y EJECUTAR EN WINDOWS ====
+
+REQUISITOS PREVIOS:
+-----------------
+1. Python 3.11 o superior instalado en tu sistema
+   Descarga: https://www.python.org/downloads/
+   IMPORTANTE: Durante la instalación, marca la casilla "Add Python to PATH"
+
+2. Conexión a internet (necesaria para consultar el servicio del Poder Judicial)
+
+PASOS PARA INSTALAR:
+------------------
+1. Descomprime todos los archivos en una carpeta de tu elección
+   Por ejemplo: C:\ConsultaExpedientes
+
+2. Abre una ventana de Símbolo del Sistema (CMD) o PowerShell:
+   - Presiona la tecla Windows + R
+   - Escribe "cmd" y presiona Enter
+
+3. Navega hasta la carpeta donde descomprimiste los archivos:
+   cd C:\ConsultaExpedientes
+   (Reemplaza "C:\ConsultaExpedientes" con la ruta donde descomprimiste los archivos)
+
+4. Instala las dependencias necesarias con el siguiente comando:
+   pip install -r requirements.txt
+
+   Este comando instalará:
+   - Flask (framework web)
+   - Zeep (cliente SOAP)
+   - xhtml2pdf (generación de PDFs)
+   - otras bibliotecas necesarias
+
+PASOS PARA EJECUTAR:
+------------------
+1. En la misma ventana de comando, ejecuta:
+   python run_windows.py
+
+2. Verás un mensaje como:
+   "Iniciando aplicación en http://localhost:5000"
+   "Presiona Ctrl+C para detener la aplicación"
+
+3. Abre tu navegador web (Chrome, Firefox, Edge, etc.)
+
+4. Visita la dirección: http://localhost:5000
+
+5. ¡Listo! Ya puedes comenzar a utilizar la aplicación
+
+SOLUCIÓN DE PROBLEMAS:
+-------------------
+Si recibes errores al instalar las dependencias:
+- Asegúrate de que Python está en el PATH del sistema
+- Intenta ejecutar: python -m pip install --upgrade pip
+- Luego vuelve a intentar la instalación: pip install -r requirements.txt
+
+Si la aplicación no inicia:
+- Verifica que el puerto 5000 no esté siendo utilizado por otra aplicación
+- Intenta cambiar el puerto en run_windows.py (por ejemplo, a 5001)
+
+Si tienes problemas para conectarte al servicio del Poder Judicial:
+- Verifica tu conexión a internet
+- Asegúrate de que no hay un firewall bloqueando la conexión
+
+Para cerrar la aplicación:
+- Presiona Ctrl+C en la ventana de comandos donde ejecutaste la aplicación
